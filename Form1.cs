@@ -64,7 +64,9 @@ namespace demoremont
                     }
                     else
                     {
-                        conn.refdata($"INSERT INTO users(login, password, idrole) VALUES ('{textBox1.Text}', '{textBox2.Text}', 2);");
+                        Form6 form6 = new Form6();
+                        form6.ShowDialog();
+                        //conn.refdata($"INSERT INTO users(login, password, idrole) VALUES ('{textBox1.Text}', '{textBox2.Text}', 2);");
                     }
                 }
             }
