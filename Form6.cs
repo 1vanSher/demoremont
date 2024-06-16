@@ -17,6 +17,10 @@ namespace demoremont
         {
             InitializeComponent();
             pictureBox1.Image = this.CreateImage(pictureBox1.Width, pictureBox1.Height);
+            string startupPath = Environment.CurrentDirectory;
+            //pictureBox2.Image = Image.FromFile(@"..\..\..\img\qr.jpeg");
+            pictureBox2.ImageLocation = @"..\..\..\img\qr.jpeg";
+            textBox2.Text = startupPath + pictureBox2.ImageLocation;
         }
 
         public Bitmap CreateImage(int width, int height)
@@ -40,6 +44,13 @@ namespace demoremont
             g.DrawString(text,
             new Font("Arial", 15), Brushes.Black,
             new PointF(Convert.ToInt32(Xpos), Convert.ToInt32(Ypos)));
+
+            g.DrawLine(Pens.Black,
+                       new Point(0, height ),
+                       new Point(width, height / 2));
+            g.DrawLine(Pens.Black,
+                       new Point(0, height/2),
+                       new Point(width, height));
 
             return bmp;
 

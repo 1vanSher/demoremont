@@ -31,7 +31,10 @@
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
             button1 = new Button();
+            pictureBox2 = new PictureBox();
+            textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -59,17 +62,35 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(188, 10);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(144, 129);
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(345, 9);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(391, 23);
+            textBox2.TabIndex = 4;
+            // 
             // Form6
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(189, 142);
+            ClientSize = new Size(766, 151);
+            Controls.Add(textBox2);
+            Controls.Add(pictureBox2);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(pictureBox1);
             Name = "Form6";
             Text = "Form6";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -79,5 +100,7 @@
         private PictureBox pictureBox1;
         private TextBox textBox1;
         private Button button1;
+        private PictureBox pictureBox2;
+        private TextBox textBox2;
     }
 }
